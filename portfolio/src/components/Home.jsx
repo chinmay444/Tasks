@@ -8,7 +8,7 @@ function Home() {
         <a href="https://avatars.githubusercontent.com/u/101935866?v=4"></a>
         <header className="bg-gray-800 text-white py-10">
           <h1 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-          <p className="text-xl mb-8">Hi, I'm Chinmay Chaudhari, a Software Engineer</p>
+          <p className="text-xl mb-8">Hi, I'm Chinmay Chaudhari, a Software Engineer here are my Skills..</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
             <SkillBox icon={<FaHtml5 />} name="HTML" />
             <SkillBox icon={<FaCss3 />} name="CSS" />
