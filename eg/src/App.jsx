@@ -1,35 +1,20 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import BookProvider from './context/BookContext';
+import BookList from './components/BookList';
+import BookDetails from './components/BookDetails';
 
-function App() {
+const App = () => {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-        
+    <BookProvider>
+      <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/" element={<BookList />} />
+          <Route path="/books/:id" element={<BookDetails />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </BookProvider>
   );
-}
+};
 
 export default App;
