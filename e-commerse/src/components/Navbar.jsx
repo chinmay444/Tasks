@@ -5,7 +5,7 @@ const Navbar = ({ cartCount }) => {
   return (
     <div className="navbar">
       <Link to="/">
-        <h2>Clothing Store</h2>
+        <h2> Store</h2>
       </Link>
 
       <Link to="/cart">
